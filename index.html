@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=M+PLUS+1+Code:wght@200&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <main>
+        <div id="introduction">
+            <img id="shield" src="./img/escudo.webp" alt="Shield of Independiente">
+            <h1 id="title">Survey</h1>
+            <p id="description">Thanks for your time and participation...</p>
+        </div>
+
+        <form action="" id="survey-form">
+            <div class="group-form">
+                <div>
+                    <label for="name" id="name-label">Name: </label>
+                    <input type="text" id="name" class="validar" name="name" placeholder="Enter your name" pattern="^([A-Z]|[a-z]{1}[a-zñáéíóú]+[\s]*)+$" title="Your name can't contain numbers or symbols" required>
+                </div>
+                <div>
+                    <label for="email" id="email-label">Email:</label>
+                    <input type="email" id="email" class="validar" name="email" placeholder="Enter your email" pattern="[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})" title="You must enter an valid email (example: jorgito@gmail.com)" required>
+                </div>
+            </div>
+            <div class="group-form">
+                <label for="number" id="number-label">Age:</label>
+                <input type="text" name="number" id="number" class="validar" placeholder="Enter your age" pattern="^\d{1,2}$" title="Enter an age valid, please." required>
+            </div>
+            <div class="group-form">
+                <p>Who are you at the club??</p>
+                <select name="whois" id="dropdown" required>
+                    <option disabled selected value>Select an option</option>
+                    <option value="fan">A fan</option>
+                    <option value="fanatical">A fanatical</option>
+                    <option value="associate">An associate</option>
+                    <option value="partner">A partner</option>
+                </select>
+            </div>
+            <div class="group-form">
+                <p>Are you satisfied with the team's season?</p>
+                <label>
+                    <input type="radio" name="user-selected" value="good" checked>
+                    Yes, definitely
+                </label>
+                <label>
+                    <input type="radio" name="user-selected" value="reg">
+                    It was regular
+                </label>
+                <label>
+                    <input type="radio" name="user-selected" value="bad">
+                    It was bad
+                </label>
+                <label>
+                    <input type="radio" name="user-selected" value="vbad">
+                    There were better
+                </label>
+            </div>
+            <div class="group-form">
+                <p>What position should we strengthen?</p>
+                <label>
+                    <input type="checkbox" value="gk">
+                    Goalkeeper
+                </label>
+                <label>
+                    <input type="checkbox" value="def">
+                    Defender
+                </label>
+                <label>
+                    <input type="checkbox" value="mdf">
+                    Midfielder
+                </label>
+                <label>
+                    <input type="checkbox" value="fwd.">
+                    Forward
+                </label>
+            </div>
+            <div class="group-form">
+                <p>Do you have any suggestions for the club?</p>
+                <textarea name="" id="" cols="30" rows="10" placeholder="Enter your comment"></textarea>
+            </div>
+            <div class="group-form">
+                <input type="submit" value="Submit" id="submit">
+            </div>
+        </form>
+    </main>
+    <div id="modal" style="visibility: hidden;">
+        <div class="contain-message" >
+            <button id="modal-btn">X</button>
+            <img id="loader" src="./img/ball-triangle.svg" alt="loader" style="visibility: hidden;">
+            <div id="modal-message">
+                <p>Este es un mensaje de prueba</p>
+            </div>
+        </div>
+    </div>
+    <script src="./code.js"></script>
+</body>
+</html>

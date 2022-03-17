@@ -1,0 +1,175 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url("./img/lib-america.webp");
+    background-attachment: fixed;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    padding: 1em 0;
+}
+#title, #description{
+    font-family: 'Bebas Neue', cursive;
+    color: #f00;
+}
+#introduction{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 3em 0;
+}
+#shield{
+    width: 80px;
+    height: auto;
+}
+#title{
+    font-size: 3em;
+}
+#description{
+    font-size: 1.5em;
+}
+
+
+#survey-form{
+    display: flex;
+    flex-direction: column;
+    width: 40vw;
+    font-family: 'M PLUS 1 Code', sans-serif;
+    font-size: 1.3em;
+    padding: 2em;
+    background: linear-gradient(transparent, #111, transparent, #111);
+    border-radius: 1em;
+    box-shadow: 3px 3px 15px 0px #fff;
+}
+.group-form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 1.5em;
+}
+.group-form:first-child{
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.group-form input:valid{
+    border-bottom: 1px solid green;
+}
+.group-form input, .group-form select, .group-form textarea{
+    padding: 0.3em;
+    margin: 0;
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid #f00;
+    color: #fff;
+    font-weight: bold;
+}
+.group-form input::placeholder, .group-form select::placeholder, .group-form textarea::placeholder{
+    color: #fff;
+    font-size: 1.3em;
+}
+
+.group-form select{
+    font-size: .8em;
+}
+
+.group-form select option{
+    background-color: #111;
+}
+textarea{
+    resize: none;
+}
+.group-form input[type="submit"]{
+    width: 25%;
+    border-bottom: 1px solid #f00;
+    font-size: 1.4em;
+    align-self: center;
+}
+
+.group-form input[type="submit"]:hover{
+    border-bottom: 1px solid #fff;
+    transition: border 0.5s;
+}
+.group-form:first-child{
+    justify-content: space-between;
+}
+.group-form > div{
+    min-width: 40%;
+}
+
+.group-form div input{
+    width: 100%;
+}
+input[type="checkbox"], input[type="radio"]{
+    font-size: .7em;
+}
+#modal{
+    position: fixed;
+    z-index: 2;
+    display: flex;
+    background-color: #11111188;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+.contain-message{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 50%;
+    border-radius: 1em;
+    background-color: #111;
+    outline: 1px solid #f00;
+}
+
+#modal-btn{
+    width: fit-content;
+    align-self: flex-end;
+    padding: 1em;
+    background-color: transparent;
+    border: none;
+    font-size: 1.1em;
+    margin-right: 1em;
+    border-bottom: 1px solid #f00;
+    color: #f00;
+}
+#loader{
+    width: 5em;
+    height: auto;
+    align-self: center;
+}
+#modal-message{
+    display: flex;
+    align-self: center;
+    height: 100%;
+}
+#modal-message p{
+    font-size: 1.4em;
+    align-self: center;
+    color: #fff;
+}
+#submit{
+    width: fit-content;
+}
+
+@media only screen and (max-width: 1360px) {
+    #survey-form{
+        margin: auto;
+        width: 80vw;
+    }
+    .group-form:first-child{
+        display: block;
+    }
+    .contain-message{
+        width: 90vw;
+    }
+    #modal-message p{
+        font-size: 1.1em;
+    }
+}
